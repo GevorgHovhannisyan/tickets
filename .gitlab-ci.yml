@@ -1,0 +1,48 @@
+stages:
+  - check
+  - deployment
+
+cache:
+  paths:
+    - vendor/
+
+check:
+  stage: check
+  environment:
+    name: ${CI_COMMIT_BRANCH}
+  script:
+    - export
+deploydeployment:
+  stage: deployment
+  image: node:20-alpine
+  environment:
+    name: ${CI_COMMIT_BRANCH}
+  only:
+    - development
+  before_script:
+    - apk add --update openssh rsync
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+  script:
+    - npm install
+    - npm run build
+    - rsync -avzuh --no-perms --no-owner --no-group -e "ssh -p ${SSH_PORT} -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --progress ./ ${SSH_USER}@${SSH_HOST}:${SSH_PATH} --progress --include 'vendor' --exclude '.git' --exclude '.gitlab-ci.yml'
+deployqa:
+  stage: deployment
+  image: node:20-alpine
+  environment:
+    name: ${CI_COMMIT_BRANCH}
+  only:
+    - qa
+  before_script:
+    - apk add --update openssh rsync
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+  script:
+    - npm install
+    - npm run build
+    - rsync -avzuh --no-perms --no-owner --no-group -e "ssh -p ${SSH_PORT} -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --progress ./ ${SSH_USER}@${SSH_HOST}:${SSH_PATH} --progress --include 'vendor' --exclude '.git' --exclude '.gitlab-ci.yml'    

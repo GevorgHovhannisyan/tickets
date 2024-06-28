@@ -1,0 +1,366 @@
+%opacity300 {
+    @include animStyle(opacity 0.3s);
+}
+
+%color300 {
+    @include animStyle(color 0.3s);
+}
+
+%back300 {
+    @include animStyle(background-color 0.3s);
+}
+
+%all300 {
+    @include animStyle(all 0.3s);
+}
+
+%opacity150 {
+    @include animStyle(opacity 0.15s);
+}
+
+%color150 {
+    @include animStyle(color 0.15s);
+}
+
+%back150 {
+    @include animStyle(background-color 0.15s);
+}
+
+%all150 {
+    @include animStyle(all 0.15s);
+}
+
+
+%textUnSelect {
+	-webkit-touch-callout: none; 
+    -webkit-user-select: none;
+     -khtml-user-select: none; 
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none;
+}
+
+%maskedInput {
+    @include maskedInput();
+}
+
+.web {
+    %socColorHover {
+        a {
+            @extend %color300;
+        }
+        .icon_youtube:hover {
+            color: $youtubeColor;    
+        }
+        .icon_behance:hover {
+            color: $behanceColor;    
+        }
+        .icon_facebook:hover {
+            color: $facebookColor;    
+        }
+        .icon_instagram:hover {
+            background: $instagramColor;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .icon_linkedin:hover {
+            color: $linkedinColor;    
+        }
+        .icon_ok:hover {
+            color: $okColor;    
+        }
+        .icon_pinterest:hover {
+            color: $pinterestColor;    
+        }
+        .icon_twitter:hover {
+            color: $twitterColor;    
+        }
+        .icon_vk:hover {
+            color: $vkColor;    
+        }
+        .icon_tiktok:hover {
+            color: $tiktokColor;    
+        }
+        .icon_telegram:hover {
+            color: $telegramColor;    
+        }
+    }
+    %siteColorHover {
+        @extend %color300;
+        &:hover {
+            color: $siteColor;
+        }
+    }
+    %siteBgHover {
+        @extend %back300;
+        &:hover {
+            background: $siteColor;
+        }
+    }
+    %siteColorAlfaHover {
+        @extend %color300;
+        &:hover {
+            color: rgba($siteColor,0.7);
+        }
+    }
+    %siteBgAlfaHover {
+        @extend %back300;
+        &:hover {
+            background: rgba($siteColor,0.7);
+        }
+    }
+    %darkReverseHover {
+        @extend %all300;
+        &:hover {
+            background: $black;
+            color: $white;
+            border-color: transparent;
+        }
+    }
+    %lightReverseHover {
+        @extend %all300;
+        &:hover {
+            background: $white;
+            color: $black;
+            border-color: transparent;
+        }
+    }
+    %opacityHover {
+        @extend %opacity300;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+
+    %siteDarkRHover {
+        @extend %all300;
+        &:hover {
+            background: $siteColor;
+            color: $textColor;
+            border-color: transparent;
+        }
+    }
+    
+    %siteLightRHover {
+        @extend %all300;
+        &:hover {
+            background: $siteColor;
+            color: $white;
+            border-color: transparent;
+        }
+    }
+
+    %darkHover {
+        @extend %color300;
+        &:hover {
+            color: $black;
+        }
+    }
+
+    %lightHover {
+        @extend %color300;
+        &:hover {
+            color: $white;
+        }
+    }
+
+    %standardHover {
+        @extend %color300;
+        &:hover {
+            color: $secondColor;
+        }
+    }
+
+    %standardBgHover {
+        @extend %all300;
+        &:hover {
+            background: $secondColor;
+            color: $textColor;
+            outline-color: transparent !important;
+        }
+    }
+
+    %scaleHover {
+        img {
+            @include animStyle(transform 0.3s);
+        }
+        &:hover img {
+            @include transStyle(scale(1.1));
+        }
+    }
+
+    %removeHover {
+        @extend %color300;
+        &:hover {
+            color: $error;
+        }
+    }
+}
+
+.touch {
+    %socColorHover {
+        a {
+            @extend %color150;
+        }
+        .icon_youtube:active {
+            color: $youtubeColor;    
+        }
+        .icon_behance:active {
+            color: $behanceColor;    
+        }
+        .icon_facebook:active {
+            color: $facebookColor;    
+        }
+        .icon_instagram:active {
+            background: $instagramColor;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .icon_linkedin:active {
+            color: $linkedinColor;    
+        }
+        .icon_ok:active {
+            color: $okColor;    
+        }
+        .icon_pinterest:active {
+            color: $pinterestColor;    
+        }
+        .icon_twitter:active {
+            color: $twitterColor;    
+        }
+        .icon_vk:active {
+            color: $vkColor;    
+        }
+        .icon_tiktok:active {
+            color: $tiktokColor;    
+        }
+        .icon_telegram:active {
+            color: $telegramColor;    
+        }
+    }
+    %siteColorActive {
+        @extend %color150;
+        &:active {
+            color: $siteColor;
+        }
+    }
+    %siteBgActive {
+        @extend %back150;
+        &:active {
+            background: $siteColor;
+        }
+    }
+    %siteColorAlfaActive {
+        @extend %color150;
+        &:active {
+            color: rgba($siteColor,0.7);
+        }
+    }
+    %siteBgAlfaActive {
+        @extend %back150;
+        &:active {
+            background: rgba($siteColor,0.7);
+        }
+    }
+    
+    %darkReverseActive {
+        @extend %all150;
+        &:active {
+            background: $black;
+            color: $white;
+            border-color: transparent;
+        }
+    }
+    %lightReverseActive {
+        @extend %all150;
+        &:active{
+            background: $white;
+            color: $black;
+            border-color: transparent;
+        }
+    }
+    %opacityActive {
+        @extend %opacity150;
+        &:active {
+            opacity: 0.7;
+        }
+    }
+
+    %siteDarkRActive {
+        @extend %all150;
+        &:active  {
+            background: $siteColor;
+            color: $textColor;
+            border-color: transparent;
+        }
+    }
+    
+    %siteLightRActive {
+        @extend %all150;
+        &:active {
+            background: $siteColor;
+            color: $white;
+            border-color: transparent;
+        }
+    }
+    %darkActive {
+        @extend %color150;
+        &:active {
+            color: $black;
+        }
+    }
+    
+    %lightActive {
+        @extend %color150;
+        &:active {
+            color: $white;
+        }
+    }
+
+    %standardActive {
+        @extend %color150;
+        &:active {
+            color: $secondColor;
+        }
+    }
+
+    %standardBgActive {
+        @extend %all150;
+        &:active {
+            background: $secondColor;
+            color: $textColor;
+            outline-color: transparent !important;
+        }
+    }
+
+	%scaleActive {
+        img {
+            @include animStyle(transform 0.15s);
+        }
+        &:active img {
+            @include transStyle(scale(1.1));
+        }
+    }
+    
+	%removeActive {
+        @extend %color150;
+        &:hover {
+            color: $error;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

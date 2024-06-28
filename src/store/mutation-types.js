@@ -1,0 +1,17 @@
+// app
+export const SHOW_LOADING = "SHOW_LOADING";
+export const SET_ADMIN = "SET_ADMIN";
+export const SAVE_TOKEN = "SAVE_TOKEN";
+
+// VENUE
+export const SET_VENUE = "SET_VENUE";
+export const SET_VENUE_TO_LIST = "SET_VENUE_TO_LIST";
+export const SET_VENUE_LIST = "SET_VENUE_LIST";
+export const SET_MAIN_GROUP = "SET_MAIN_GROUP";
+export const DELETE_LAYER = "DELETE_LAYER";
+export const SET_BUILDER_CONFIGS = "SET_BUILDER_CONFIGS";
+export const DELETE_VENUE = "DELETE_VENUE";
+export const SET_EDIT_BUILDER_CONFIGS = "SET_EDIT_BUILDER_CONFIGS";
+export const SET_EDIT_CONFIGS = "SET_EDIT_CONFIGS";
+export const SET_INVALID_IMAGE = "SET_INVALID_IMAGE";
+export const RESET_STAGE = 'RESET_STAGE'

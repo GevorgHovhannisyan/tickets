@@ -1,0 +1,27 @@
+.header {
+    z-index: 100;
+    .main_menu {
+        display: flex;
+        @extend %standardList;
+        > li {
+            padding: 0 10px;
+            position: relative;
+            > .submenu_list {
+                left: 0;
+                top: 100%;
+                li {
+                    position: relative;
+                    padding: 10px;
+                }
+                .submenu_list {
+                    top: 0;
+                    left: 100%;
+                }
+            }
+        }
+    }
+    .submenu_list {
+        display: none;
+        position: absolute;
+    }
+}

@@ -1,0 +1,60 @@
+//font families
+$regular: "Lato-Regular";
+$bold: "Lato-Bold";
+
+//media query sizes
+$size360: 360px;
+$size400: 400px;
+$size480: 480px;
+$size576: 576px;
+$size600: 600px;
+$size640: 640px;
+$size720: 720px;
+$size768: 768px;
+$size960: 1025px;
+$size1200: 1200px;
+$size1280: 1280px;
+$size1366: 1366px;
+$size1440: 1440px;
+$size1600: 1600px;
+
+//colors
+$black: #000000;
+$black33: #333333; 
+$gray66: #666666;
+$gray99: #999999;
+$grayE5: #e5e5e5;
+$white: #ffffff;
+$creamyF2:#f2f2f2;
+$error: #C7383F;
+$siteColor: #BE0619;
+$secondColor: #E5A800;
+$textColor: $black33;
+$success: #38C758;
+$info: #388BC7;
+$warning: #FFD99F;
+$devColor: #069dd5;
+
+//social icons original color
+$facebookColor: #3b5998;
+$twitterColor: #00acee;
+$youtubeColor: #c4302b;
+$behanceColor: #053eff;
+$linkedinColor: #0e76a8;
+$okColor: #ed812b;
+$pinterestColor: #c8232c;
+$vkColor: #4c75a3;
+$tiktokColor: #EE1D52;
+$telegramColor: #0088cc;
+$instagramColor: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+
+//sizes
+$containerWidth: 1170px;
+$containerPadding: 15px;
+$containerMobPadding: 15px;
+$colPadding: 15px;
+$colMobPadding: 15px;
+$rowMargin: -$colPadding;
+$rowMobMargin: -$colMobPadding;
+
+
